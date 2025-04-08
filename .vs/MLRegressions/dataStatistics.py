@@ -41,4 +41,10 @@ class Statistics:
        
     #    print('Missing values in numerical types: ', df_Dataset[numerical].isnull().sum())
        
-       print(df_Dataset.describe())
+        print(df_Dataset.columns.isnull())
+        
+        
+        columns=df_Dataset.columns
+        
+        for col in columns:
+            print(col, ' contains ', df_Dataset.loc[ : ,col].isnull().sum(), ' missing values')
